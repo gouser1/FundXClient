@@ -108,7 +108,7 @@ function AdminPanel(props) {
 
   const getUsers = () => {
     axios
-      .get("https://fundx-jamesgilliland.herokuapp.com/users", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/auth/users", {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },
