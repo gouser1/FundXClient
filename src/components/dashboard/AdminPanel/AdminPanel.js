@@ -162,8 +162,12 @@ function AdminPanel(props) {
       });
   };
 
-  const [setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false);
   const [openNewUser, setopenNewUser] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
   const handleClose = () => {
     setOpen(false);
@@ -506,6 +510,7 @@ function AdminPanel(props) {
                             <DialogActions>
                               <Button
                                 onClick={() => {
+                                  console.log("updateUser");
                                   updateUser(value.id);
                                   closeModal();
                                 }}
