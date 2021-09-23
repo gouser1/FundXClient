@@ -29,9 +29,11 @@ const SingleListing = () => {
   const classes = useStyles();
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/pitches/byId/${id}`).then((response) => {
-      setSinglePitch(response.data);
-    });
+    axios
+      .get(`https://fundx-jamesgilliland.herokuapp.com/pitches/byId/${id}`)
+      .then((response) => {
+        setSinglePitch(response.data);
+      });
   }, [id]);
 
   return (

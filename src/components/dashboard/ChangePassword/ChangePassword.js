@@ -36,7 +36,7 @@ function ChangePassword(props) {
   const changePassword = (data) => {
     axios
       .put(
-        "http://localhost:3001/auth/changepassword",
+        "https://fundx-jamesgilliland.herokuapp.com/auth/changepassword",
         {
           oldPassword: data.oldPassword,
           newPassword: data.newPassword,

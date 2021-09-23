@@ -51,7 +51,7 @@ function EditProfile(props) {
     }
 
     axios
-      .get("http://localhost:3001/auth/userinfo/", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/auth/userinfo/", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
 
@@ -73,7 +73,7 @@ function EditProfile(props) {
     console.log("accessToken: ", localStorage.getItem("accessToken"));
     axios({
       method: "PUT", //you can set what request you want to be
-      url: "http://localhost:3001/auth/updateprofile",
+      url: "https://fundx-jamesgilliland.herokuapp.com/auth/updateprofile",
       data: data,
       headers: {
         accessToken: localStorage.getItem("accessToken"),

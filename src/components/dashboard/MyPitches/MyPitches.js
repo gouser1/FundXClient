@@ -39,7 +39,7 @@ const MyPitches = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/pitches/userspitches", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/pitches/userspitches", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {
@@ -54,7 +54,7 @@ const MyPitches = () => {
 
   const deletePitch = (id) => {
     axios
-      .delete(`http://localhost:3001/pitches/${id}`, {
+      .delete(`https://fundx-jamesgilliland.herokuapp.com/pitches/${id}`, {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },

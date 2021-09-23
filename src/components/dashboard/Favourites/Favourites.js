@@ -37,9 +37,12 @@ const Favourites = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/favourite/userfavourites", {
-        headers: { accessToken: localStorage.getItem("accessToken") },
-      })
+      .get(
+        "https://fundx-jamesgilliland.herokuapp.com/favourite/userfavourites",
+        {
+          headers: { accessToken: localStorage.getItem("accessToken") },
+        }
+      )
       .then((response) => {
         setFavouritedPitches(response.data);
         setIsSet(true);
@@ -53,7 +56,7 @@ const Favourites = () => {
   const favouritePitch = (pitchId) => {
     axios
       .post(
-        "http://localhost:3001/favourite",
+        "https://fundx-jamesgilliland.herokuapp.com/favourite",
         { PitchId: pitchId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )

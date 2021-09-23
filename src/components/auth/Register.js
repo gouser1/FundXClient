@@ -76,7 +76,7 @@ const Register = (props) => {
             validationSchema={FORM_VALIDATION}
             onSubmit={(values) => {
               axios
-                .post('http://localhost:3001/auth', values)
+                .post('https://fundx-jamesgilliland.herokuapp.com/auth', values)
                 .then((response) => {
                   history.push('/login');
                 });

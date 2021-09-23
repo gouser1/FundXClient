@@ -37,7 +37,7 @@ function Profile(props) {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:3001/auth/userinfo/`, {
+      .get(`https://fundx-jamesgilliland.herokuapp.com/auth/userinfo/`, {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {
@@ -45,7 +45,7 @@ function Profile(props) {
       });
 
     axios
-      .get(`http://localhost:3001/pitches/byuserId/${id}`)
+      .get(`https://fundx-jamesgilliland.herokuapp.com/pitches/byuserId/${id}`)
       .then((response) => {
         setListOfPitches(response.data);
       });
@@ -54,7 +54,7 @@ function Profile(props) {
   const favouritePitch = (pitchId) => {
     axios
       .post(
-        "http://localhost:3001/favourite",
+        "https://fundx-jamesgilliland.herokuapp.com/favourite",
         { PitchId: pitchId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )
@@ -90,7 +90,12 @@ function Profile(props) {
   };
   return (
     <div className={classes.root}>
-      <Button size="small" onClick={goBack} className={classes.button} style={{margin: "2%"}}>
+      <Button
+        size="small"
+        onClick={goBack}
+        className={classes.button}
+        style={{ margin: "2%" }}
+      >
         <ArrowBack color="white" />
         Back
       </Button>

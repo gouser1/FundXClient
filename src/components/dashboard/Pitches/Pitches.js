@@ -53,7 +53,7 @@ const Pitches = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/pitches", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/pitches", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {
@@ -65,7 +65,7 @@ const Pitches = () => {
   const favouritePitch = (pitchId) => {
     axios
       .post(
-        "http://localhost:3001/favourite",
+        "https://fundx-jamesgilliland.herokuapp.com/favourite",
         { PitchId: pitchId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )

@@ -67,7 +67,7 @@ function AdminPanel(props) {
 
   const addUser = () => {
     axios
-      .post("http://localhost:3001/auth", {
+      .post("https://fundx-jamesgilliland.herokuapp.com/auth", {
         email: email,
         displayName: displayName,
         firstName: firstName,
@@ -108,7 +108,7 @@ function AdminPanel(props) {
 
   const getUsers = () => {
     axios
-      .get("http://localhost:3001/auth/users", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/users", {
         headers: {
           accessToken: localStorage.getItem("accessToken"),
         },
@@ -130,7 +130,7 @@ function AdminPanel(props) {
 
     axios({
       method: "put", //you can set what request you want to be
-      url: "http://localhost:3001/auth/updateuser",
+      url: "https://fundx-jamesgilliland.herokuapp.com/updateuser",
       data: {
         email: newEmail,
         id: id,
@@ -154,12 +154,14 @@ function AdminPanel(props) {
   };
 
   const deleteUser = (id) => {
-    axios.delete(`http://localhost:3001/auth/delete/${id}`).then((response) => {
-      if (response.status === 200) {
-        getUsers();
-        handleDeleteSnackBar();
-      }
-    });
+    axios
+      .delete(`https://fundx-jamesgilliland.herokuapp.com/auth/delete/${id}`)
+      .then((response) => {
+        if (response.status === 200) {
+          getUsers();
+          handleDeleteSnackBar();
+        }
+      });
   };
 
   const [open, setOpen] = React.useState(false);
@@ -183,7 +185,7 @@ function AdminPanel(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/auth/auth", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/auth/auth", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
 

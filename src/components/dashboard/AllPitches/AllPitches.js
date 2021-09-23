@@ -41,7 +41,7 @@ const AllPitches = () => {
 
   const getListOfPitches = () => {
     axios
-      .get("http://localhost:3001/pitches", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/pitches", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {
@@ -55,7 +55,7 @@ const AllPitches = () => {
 
     axios
       .get(
-        `http://localhost:3001/pitches/?country=${country}&industry=${encodeURIComponent(
+        `https://fundx-jamesgilliland.herokuapp.com/pitches/?country=${country}&industry=${encodeURIComponent(
           industry
         )}`,
         {
@@ -84,7 +84,7 @@ const AllPitches = () => {
   const favouritePitch = (pitchId) => {
     axios
       .post(
-        "http://localhost:3001/favourite",
+        "https://fundx-jamesgilliland.herokuapp.com/favourite",
         { PitchId: pitchId },
         { headers: { accessToken: localStorage.getItem("accessToken") } }
       )

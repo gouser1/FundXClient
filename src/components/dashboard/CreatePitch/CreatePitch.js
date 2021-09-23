@@ -79,11 +79,15 @@ function CreatePitch(props) {
                 validationSchema={FORM_VALIDATION}
                 onSubmit={(data) => {
                   axios
-                    .post("http://localhost:3001/pitches", data, {
-                      headers: {
-                        accessToken: localStorage.getItem("accessToken"),
-                      },
-                    })
+                    .post(
+                      "https://fundx-jamesgilliland.herokuapp.com/pitches",
+                      data,
+                      {
+                        headers: {
+                          accessToken: localStorage.getItem("accessToken"),
+                        },
+                      }
+                    )
                     .then((response) => {
                       history.push("/dashboard/mypitches");
                     });

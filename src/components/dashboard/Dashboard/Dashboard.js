@@ -51,7 +51,7 @@ function Dashboard(props) {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/auth/auth", {
+      .get("https://fundx-jamesgilliland.herokuapp.com/auth/auth", {
         headers: { accessToken: localStorage.getItem("accessToken") },
       })
       .then((response) => {
