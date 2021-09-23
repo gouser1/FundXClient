@@ -128,7 +128,7 @@ function AdminPanel(props) {
   const updateUser = (id) => {
     axios({
       method: "put", //you can set what request you want to be
-      url: "https://fundx-jamesgilliland.herokuapp.com/updateuser",
+      url: "https://fundx-jamesgilliland.herokuapp.com/auth/updateuser",
       data: {
         email: newEmail,
         id: id,
@@ -162,12 +162,8 @@ function AdminPanel(props) {
       });
   };
 
-  const [open, setOpen] = React.useState(false);
+  const [setOpen] = React.useState(false);
   const [openNewUser, setopenNewUser] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
 
   const handleClose = () => {
     setOpen(false);
@@ -510,7 +506,6 @@ function AdminPanel(props) {
                             <DialogActions>
                               <Button
                                 onClick={() => {
-                                  console.log("updateUser");
                                   updateUser(value.id);
                                   closeModal();
                                 }}
