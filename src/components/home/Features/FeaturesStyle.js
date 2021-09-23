@@ -15,7 +15,8 @@ export default makeStyles(() => ({
   h1: {
     textAlign: "center",
     fontFamily: "'Karla', sans-serif;",
-    fontSize: "2.2em",
+    fontSize: "1.5em",
+    marginBottom: "2%",
     color: "#22303d",
     fontWeight: "700",
     "@media (min-width:700px)": {
@@ -28,7 +29,8 @@ export default makeStyles(() => ({
     fontWeight: "700",
     color: "#46637f",
     "@media (max-width:700px)": {
-      fontSize: "1.6rem",
+      fontSize: "1.3em",
+      marginBottom: "4%",
       textAlign: "center",
     },
   },
@@ -45,7 +47,7 @@ export default makeStyles(() => ({
       textAlign: "center",
     },
     "@media (max-width:1400px)": {
-      fontSize: "1.3rem",
+      fontSize: "1.1rem",
     },
   },
   box: {

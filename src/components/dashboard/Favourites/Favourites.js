@@ -46,7 +46,6 @@ const Favourites = () => {
       .then((response) => {
         setFavouritedPitches(response.data);
         setIsSet(true);
-        console.log(response.data);
       });
     if (!localStorage.getItem("accessToken")) {
       history.push("/login");

@@ -56,7 +56,6 @@ function EditProfile(props) {
       })
 
       .then((response) => {
-        console.log(response.data);
         setEmail(response.data.email);
         setFirstName(response.data.firstName);
         setLastName(response.data.lastName);
@@ -70,7 +69,6 @@ function EditProfile(props) {
   }, [history]);
 
   const editProfile = (data) => {
-    console.log("accessToken: ", localStorage.getItem("accessToken"));
     axios({
       method: "PUT", //you can set what request you want to be
       url: "https://fundx-jamesgilliland.herokuapp.com/auth/updateprofile",

@@ -21,8 +21,6 @@ function ChangePassword(props) {
   });
   let history = useHistory();
   const classes = useStyles();
-  const [oldPassword, setOldPassword] = useState("");
-  const [newPassword, setNewPassword] = useState("");
 
   const [openSuccessSnackBar, setOpenSuccessSnackBar] = React.useState(false);
   const [openErrorSnackBar, setOpenErrorSnackBar] = React.useState(false);

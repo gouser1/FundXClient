@@ -24,7 +24,7 @@ export default makeStyles(() => ({
   h1: {
     textAlign: "center",
     fontFamily: "'Karla', sans-serif;",
-    fontSize: "2.2em",
+    fontSize: "1.5em",
     color: "#22303d",
     fontWeight: "700",
     "@media (min-width:700px)": {
@@ -33,7 +33,7 @@ export default makeStyles(() => ({
   },
   h2: {
     fontFamily: "'Rubik', sans-serif;",
-    fontSize: "1.2em",
+    fontSize: "1.1em",
     color: "#46637f",
     "@media (min-width:700px)": {
       fontSize: "1.6rem",

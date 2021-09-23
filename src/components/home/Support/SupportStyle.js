@@ -16,7 +16,7 @@ export default makeStyles(() => ({
   h1: {
     textAlign: "center",
     fontFamily: "'Karla', sans-serif;",
-    fontSize: "2.2em",
+    fontSize: "1.5em",
     color: "white",
     fontWeight: "700",
     "@media (min-width:700px)": {
@@ -29,23 +29,25 @@ export default makeStyles(() => ({
     fontWeight: "700",
     color: "white",
     "@media (max-width:700px)": {
-      fontSize: "1.6rem",
+      fontSize: "1.4em",
+      marginBottom: "5%",
       textAlign: "center",
     },
   },
   p1: {
     textAlign: "left",
+    marginTop: "3%",
     fontFamily: "'Rubik', sans-serif;",
-    fontSize: "1.3em",
+    fontSize: "1.2em",
     color: "white",
     letterSpacing: "0.02em",
-    lineHeight: "1.4em",
+    lineHeight: "1em",
     "@media (max-width:700px)": {
       fontSize: "1.3rem",
       textAlign: "center",
     },
     "@media (max-width:1400px)": {
-      fontSize: "1.3rem",
+      fontSize: "1.1rem",
     },
   },
   button: {
@@ -58,6 +60,7 @@ export default makeStyles(() => ({
     },
     textTransform: "none",
   },
+
   box: {
     "@media (min-width:1500px)": {
       paddingTop: "4em",

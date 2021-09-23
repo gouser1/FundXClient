@@ -21,15 +21,11 @@ import { useHistory, Link } from "react-router-dom";
 import { AuthContext } from "../../../helpers/AuthContext";
 import useStyles from "./MyPitchesStyle";
 
-function Alert(props) {}
-
 const MyPitches = () => {
   let history = useHistory();
   const classes = useStyles();
   const [usersPitches, setUsersPitches] = useState([]);
   const [isSet, setIsSet] = useState(false);
-
-  const [openDeleteSnackBar, setOpenDeleteSnackBar] = React.useState(false);
 
   const [authState, setAuthState] = useState({
     displayName: "",
@@ -45,7 +41,6 @@ const MyPitches = () => {
       .then((response) => {
         setUsersPitches(response.data);
         setIsSet(true);
-        console.log(response.data);
       });
     if (!localStorage.getItem("accessToken")) {
       history.push("/login");
@@ -64,17 +59,6 @@ const MyPitches = () => {
           history.go(0);
         }
       });
-  };
-
-  const handleDeleteSnackBar = () => {
-    setOpenDeleteSnackBar(true);
-  };
-
-  const handleDeleteSnackBarClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-    setOpenDeleteSnackBar(false);
   };
 
   if (isSet) {

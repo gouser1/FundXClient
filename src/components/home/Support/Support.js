@@ -87,13 +87,27 @@ function Support(props) {
               requested.
             </Typography>
           </Box>
+
           <Box pt={2} xs={12}>
-            <Button
-              onClick={() => handleButtonClick("/")}
-              className={classes.button}
-            >
-              Contact us
-            </Button>
+            <Hidden only="xs">
+              <Button
+                onClick={() => handleButtonClick("/")}
+                className={classes.button}
+              >
+                Contact us
+              </Button>
+            </Hidden>
+            <Hidden smUp>
+              <Box textAlign="center">
+                <Button
+                  variant="contained"
+                  className={classes.button}
+                  onClick={() => handleButtonClick("/")}
+                >
+                  Contact us
+                </Button>
+              </Box>
+            </Hidden>
 
             <Dialog
               open={open}
