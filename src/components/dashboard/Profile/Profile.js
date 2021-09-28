@@ -20,7 +20,7 @@ import { useHistory, useParams } from "react-router-dom";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import Favorite from "@material-ui/icons/Favorite";
 import Location from "@material-ui/icons/LocationOn";
-import cardImage from "../../../images/dashboard/placeholder.jpg";
+import cardImage from "../../../images/dashboard/placeholder.png";
 import userIcon from "../../../images/dashboard/usericon.png";
 import useStyles from "./ProfileStyle";
 

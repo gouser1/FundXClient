@@ -21,7 +21,7 @@ import { useHistory, Link } from "react-router-dom";
 import Favorite from "@material-ui/icons/Favorite";
 import Location from "@material-ui/icons/LocationOn";
 import industries from "../../../data/industries.json";
-import cardImage from "../../../images/dashboard/placeholder.jpg";
+import cardImage from "../../../images/dashboard/placeholder.png";
 import userIcon from "../../../images/dashboard/usericon.png";
 import countries from "../../../data/countriesFilter.json";
 import { Formik, Form } from "formik";

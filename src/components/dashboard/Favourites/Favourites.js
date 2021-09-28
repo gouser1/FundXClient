@@ -16,7 +16,7 @@ import {
 } from "@material-ui/core";
 import axios from "axios";
 import Location from "@material-ui/icons/LocationOn";
-import cardImage from "../../../images/dashboard/placeholder.jpg";
+import cardImage from "../../../images/dashboard/placeholder.png";
 import Favorite from "@material-ui/icons/Favorite";
 import userIcon from "../../../images/dashboard/usericon.png";
 import { useHistory, Link } from "react-router-dom";

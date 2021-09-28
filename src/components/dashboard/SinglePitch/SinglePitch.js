@@ -15,7 +15,7 @@ import {
 } from "@material-ui/core";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import Location from "@material-ui/icons/LocationOn";
-import cardImage from "../../../images/dashboard/placeholder.jpg";
+import cardImage from "../../../images/dashboard/placeholder.png";
 import userIcon from "../../../images/dashboard/usericon.png";
 import useStyles from "./SinglePitchStyle";
 

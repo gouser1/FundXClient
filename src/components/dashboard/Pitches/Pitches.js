@@ -18,7 +18,7 @@ import { useEffect, useState } from "react";
 import { useHistory, Link } from "react-router-dom";
 import Favorite from "@material-ui/icons/Favorite";
 import Location from "@material-ui/icons/LocationOn";
-import cardImage from "../../../images/dashboard/placeholder.jpg";
+import cardImage from "../../../images/dashboard/placeholder.png";
 import userIcon from "../../../images/dashboard/usericon.png";
 import ArrowBack from "@material-ui/icons/ArrowBackIos";
 import ArrowForward from "@material-ui/icons/ArrowForwardIos";
