@@ -71,7 +71,6 @@ const SingleListing = () => {
                   </Badge>
                 }
               />
-              <CardMedia className={classes.media} image={cardImage} />
 
               <Typography className={classes.h2} style={{ marginTop: "3%" }}>
                 Investment Information
