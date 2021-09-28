@@ -54,7 +54,7 @@ export default makeStyles(() => ({
     fontFamily: "'Karla', sans-serif;",
     fontSize: "1.4em",
     color: "white",
-    backgroundColor: "#2EA076",
+    backgroundColor: "#0e5239",
     "&:hover": {
       backgroundColor: "#0e5239",
     },

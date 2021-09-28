@@ -50,8 +50,8 @@ function Hero(props) {
           <Grid item lg={6} md={10} sm={10} xs={12}>
             <Box textAlign="center">
               <Typography className={classes.h2}>
-                We are an Angel-led Investment platform that connects high grow
-                potentional companies with experienced investors.
+                We are an Angel-led Investment platform that connects high
+                growth potentional companies with experienced investors.
               </Typography>
             </Box>
           </Grid>
